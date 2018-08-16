@@ -17,6 +17,8 @@ export default class Stack {
    * @returns {*}
    */
   pop() {
+    if (this.isEmpty()) { return null; }
+
     return this._array.pop();
   }
 
@@ -24,11 +26,29 @@ export default class Stack {
    * @returns {*}
    */
   peek() {
+    if (this.isEmpty()) { return null; }
+
     const lastIndex = this._array.length - 1;
     return this._array[lastIndex];
   }
 
-  toString() {
-    return this._array.toString();
+  isEmpty() {
+    if (this._array.length === 0) {
+      return true;
+    }
+
+    return false;
+  }
+
+  toString(callback = x => x) {
+    return this._array.map(x => callback(x)).toString();
+  }
+
+  toArray() {
+    const reversedArray = this._array
+      .map(x => x)
+      .reverse();
+      
+    return reversedArray;
   }
 }
