@@ -1,0 +1,21 @@
+{
+  "name": "data-struct-impl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel-node": "babel-node",
+    "dev": "nodemon --exec npm run babel-node -- stack/index.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.5.0",
+    "nodemon": "^1.18.3"
+  },
+  "dependencies": {}
+}
