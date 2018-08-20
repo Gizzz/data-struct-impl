@@ -4,7 +4,6 @@ describe('Queue', () => {
   it('should create empty queue', () => {
     const queue = new Queue();
     expect(queue).not.toBeNull();
-    expect(queue._array).toBeDefined();
   });
 
   it('should enqueue data to queue', () => {
