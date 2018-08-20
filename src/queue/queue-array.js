@@ -1,4 +1,4 @@
-export default class Queue {
+export default class Queue_Array {
   constructor() {
     this._array = [];
   }

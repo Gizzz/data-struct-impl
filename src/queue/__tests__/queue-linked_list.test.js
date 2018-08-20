@@ -1,13 +1,13 @@
-import Queue from '../queue';
+import Queue_LinkedList from '../queue-linked_list';
 
 describe('Queue', () => {
   it('should create empty queue', () => {
-    const queue = new Queue();
+    const queue = new Queue_LinkedList();
     expect(queue).not.toBeNull();
   });
 
   it('should enqueue data to queue', () => {
-    const queue = new Queue();
+    const queue = new Queue_LinkedList();
 
     queue.enqueue(1);
     queue.enqueue(2);
@@ -16,7 +16,7 @@ describe('Queue', () => {
   });
 
   it('should be possible to enqueue/dequeue objects', () => {
-    const queue = new Queue();
+    const queue = new Queue_LinkedList();
 
     queue.enqueue({ value: 'test1', key: 'key1' });
     queue.enqueue({ value: 'test2', key: 'key2' });
@@ -29,7 +29,7 @@ describe('Queue', () => {
   });
 
   it('should peek data from queue', () => {
-    const queue = new Queue();
+    const queue = new Queue_LinkedList();
 
     expect(queue.peek()).toBeNull();
 
@@ -41,7 +41,7 @@ describe('Queue', () => {
   });
 
   it('should check if queue is empty', () => {
-    const queue = new Queue();
+    const queue = new Queue_LinkedList();
 
     expect(queue.isEmpty()).toBe(true);
 
@@ -51,7 +51,7 @@ describe('Queue', () => {
   });
 
   it('should dequeue from queue in FIFO order', () => {
-    const queue = new Queue();
+    const queue = new Queue_LinkedList();
 
     queue.enqueue(1);
     queue.enqueue(2);
